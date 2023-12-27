@@ -1,0 +1,54 @@
+2023-12-27 21:40:54,450 | INFO: Start of Banking System....
+2023-12-27 21:40:54,451 | INFO: Amount 500 deposit successfully. Depositer current balance 10500.
+2023-12-27 21:40:54,452 | INFO: Take 2000. Current balance is 8500.
+2023-12-27 21:40:54,452 | INFO: Amount 100 deposit successfully. Depositer current balance 8600.
+2023-12-27 21:40:58,954 | INFO: Start of employee management system...
+2023-12-27 21:40:58,955 | INFO: Calculated yearly bonus for 40000: 8000.0
+2023-12-27 21:40:58,955 | INFO: Show the employee details...
+2023-12-27 21:40:58,957 | INFO: Employee ID: 1234, Name: Rajdip Das, Salary: 40000, bonus: 8000.0
+2023-12-27 21:41:02,282 | INFO: Starting vehicle rental system....
+2023-12-27 21:41:02,283 | INFO: bike1 added to available vehicles.
+2023-12-27 21:41:02,283 | INFO: bike2 added to available vehicles.
+2023-12-27 21:41:02,284 | INFO: car1 added to available vehicles.
+2023-12-27 21:41:02,284 | INFO: car2 added to available vehicles.
+2023-12-27 21:41:02,285 | INFO: Available vehicles: {'bike1', 'car1', 'bike2', 'car2'}
+2023-12-27 21:41:02,285 | INFO: car2 rented.
+2023-12-27 21:41:02,285 | INFO: Available vehicles: {'bike1', 'car1', 'bike2'}
+2023-12-27 21:41:02,286 | INFO: car2 returned.
+2023-12-27 21:41:02,286 | INFO: Available vehicles: {'bike1', 'car1', 'bike2', 'car2'}
+2023-12-27 21:41:07,153 | INFO: Making a book...
+2023-12-27 21:41:07,154 | INFO: Starting library...
+2023-12-27 21:41:07,155 | INFO: Added 'Let us C' by Yashavant Kanetkar to the library.
+2023-12-27 21:41:07,155 | INFO: Added 'Python for dummies' by Stef Maruch to the library.
+2023-12-27 21:41:07,156 | INFO: Added 'Rich Dad Poor Dad' by Robert Kiyosaki to the library.
+2023-12-27 21:41:07,156 | INFO: Available books: 
+2023-12-27 21:41:07,156 | INFO: 'Let us C' by Yashavant Kanetkar
+2023-12-27 21:41:07,157 | INFO: 'Python for dummies' by Stef Maruch
+2023-12-27 21:41:07,157 | INFO: 'Rich Dad Poor Dad' by Robert Kiyosaki
+2023-12-27 21:41:07,157 | INFO: Borrowed 'Let us C' by Yashavant Kanetkar.
+2023-12-27 21:41:07,157 | INFO: Borrowed 'Python for dummies' by Stef Maruch.
+2023-12-27 21:41:07,157 | INFO: Available books: 
+2023-12-27 21:41:07,157 | INFO: 'Rich Dad Poor Dad' by Robert Kiyosaki
+2023-12-27 21:41:07,157 | INFO: Returned 'Let us C' by Yashavant Kanetkar.
+2023-12-27 21:41:07,157 | INFO: Available books: 
+2023-12-27 21:41:07,157 | INFO: 'Let us C' by Yashavant Kanetkar
+2023-12-27 21:41:07,157 | INFO: 'Rich Dad Poor Dad' by Robert Kiyosaki
+2023-12-27 21:41:10,582 | INFO: Making a product....
+2023-12-27 21:41:10,584 | INFO: Starting inventory....
+2023-12-27 21:41:10,585 | INFO: Added 50 'Laptop' (ID: 1201) to the inventory.
+2023-12-27 21:41:10,585 | INFO: Added 95 'Keyboard' (ID: 1202) to the inventory.
+2023-12-27 21:41:10,585 | INFO: Added 20 'Monitor' (ID: 1203) to the inventory.
+2023-12-27 21:41:10,586 | INFO: Added 85 'Mouse' (ID: 1204) to the inventory.
+2023-12-27 21:41:10,586 | INFO: Available Products: 
+2023-12-27 21:41:10,586 | INFO: ID: 1201, Name: Laptop, Quantity: 50
+2023-12-27 21:41:10,586 | INFO: ID: 1202, Name: Keyboard, Quantity: 95
+2023-12-27 21:41:10,586 | INFO: ID: 1203, Name: Monitor, Quantity: 20
+2023-12-27 21:41:10,586 | INFO: ID: 1204, Name: Mouse, Quantity: 85
+2023-12-27 21:41:10,586 | INFO: Updated quantity of 'Monitor' (ID: 1203) to 50.
+2023-12-27 21:41:10,586 | ERROR: Product with ID '1214' doesn't exist in the inventory.
+2023-12-27 21:41:10,587 | INFO: Updated quantity of 'Laptop' (ID: 1201) to 75.
+2023-12-27 21:41:10,587 | INFO: Available Products: 
+2023-12-27 21:41:10,587 | INFO: ID: 1201, Name: Laptop, Quantity: 75
+2023-12-27 21:41:10,587 | INFO: ID: 1202, Name: Keyboard, Quantity: 95
+2023-12-27 21:41:10,587 | INFO: ID: 1203, Name: Monitor, Quantity: 50
+2023-12-27 21:41:10,587 | INFO: ID: 1204, Name: Mouse, Quantity: 85
