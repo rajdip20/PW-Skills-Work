@@ -69,3 +69,21 @@
 2023-12-28 13:04:55,206 | INFO: Student ID: 15, Name: Raj, Grades: [28, 35, 47, 49]
 2023-12-28 13:04:55,206 | INFO: Average grade for Dev: 34.0
 2023-12-28 13:04:55,206 | INFO: Average grade for Raj: 39.75
+2023-12-29 10:27:28,231 | INFO: Starting of social media.....
+2023-12-29 10:27:28,236 | INFO: Added a new post: Hello everyone!! It's my first post.
+2023-12-29 10:27:28,237 | INFO: Added a new post: It is a beautiful day!!
+2023-12-29 10:27:28,238 | INFO: Added a new post: The flower is so beautiful.
+2023-12-29 10:27:28,238 | INFO: Posts by Rajdip Das:
+2023-12-29 10:27:28,239 | INFO: ["Hello everyone!! It's my first post.", 'It is a beautiful day!!', 'The flower is so beautiful.']
+2023-12-29 10:27:28,241 | INFO: Entered keyword: beautiful
+2023-12-29 10:27:28,241 | INFO: Posts containing 'beautiful' by Rajdip Das
+2023-12-29 10:27:28,242 | INFO: ['It is a beautiful day!!', 'The flower is so beautiful.']
+2023-12-29 11:55:22,946 | INFO: Starting of Todolist....
+2023-12-29 11:55:22,950 | INFO: Added Task: Finish assignment, Due: 30-12-2023
+2023-12-29 11:55:22,952 | INFO: Added Task: Go to gym, Due: 29-12-2023
+2023-12-29 11:55:22,952 | INFO: Added Task: Go to market, Due: 29-12-2023
+2023-12-29 11:55:22,953 | INFO: Pending tasks:
+2023-12-29 11:55:22,953 | INFO: dict_items([('Finish assignment', '30-12-2023'), ('Go to gym', '29-12-2023'), ('Go to market', '29-12-2023')])
+2023-12-29 11:55:22,953 | INFO: Marked task 'Go to market' as completed.
+2023-12-29 11:55:22,954 | INFO: Pending tasks:
+2023-12-29 11:55:22,954 | INFO: dict_items([('Finish assignment', '30-12-2023'), ('Go to gym', '29-12-2023')])
