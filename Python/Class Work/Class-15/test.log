@@ -1,0 +1,27 @@
+INFO:root:start of my program
+INFO:root:[3, 4, [5, 6], 8, 10, [24, 65]]
+INFO:root:3
+INFO:root:4
+INFO:root:[5, 6]
+INFO:root:8
+INFO:root:10
+INFO:root:[24, 65]
+INFO:root:end of program
+INFO:root:start of my program
+INFO:root:[3, 4, [5, 6], 8, 10, [24, 65]]
+INFO:root:3
+INFO:root:4
+INFO:root:[5, 6]
+INFO:root:8
+INFO:root:10
+INFO:root:[24, 65]
+INFO:root:end of program
+INFO:root:start of my program
+INFO:root:[3, 4, [5, 6], 8, 10, [24, 65]]
+INFO:root:3
+INFO:root:4
+INFO:root:[5, 6]
+INFO:root:8
+INFO:root:10
+INFO:root:[24, 65]
+INFO:root:end of program
