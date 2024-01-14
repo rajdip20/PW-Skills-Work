@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>File Upload</title>
+    </head>
+
+    <body>
+        <h1>File Upload</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".png, .jpg, .jpeg, .gif" required>
+            <input type="submit" value="Upload">
+        </form>
+
+        <h2>Uploaded Files</h2>
+        <ul>
+            {% for file in files %}
+                <li>
+                    <p>{{ file }}</p>
+                    <img src="{{ url_for('uploaded_file', filename=file) }}" alt="{{ file }}" style="max-width: 300px;">
+                    
+                    <form action="{{ url_for('delete_file', filename=file) }}" method="post">
+                        <input type="submit" value="Delete">
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Book API</title>
+    </head>
+
+    <body>
+        <h1>Books</h1>
+        <ul>
+            {% for book in books %}
+            <li>
+                {{ book[1] }} by {{ book[2] }} ({{ book[3] }})
+                <button type="button" onclick="editBook({{ book[0] }})">Edit</button>
+                <button type="button" onclick="deleteBook({{ book[0] }})">Delete</button>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h2>Add a new book:</h2>
+        <form id="addForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required><br><br>
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" required><br><br>
+
+            <button type="button" onclick="addBook()">Add Book</button>
+        </form>
+
+        <div id="editFormContainer" style="display: none;">
+            <h2>Edit Book</h2>
+            <form id="editForm">
+                <input type="hidden" id="editBookId" name="editBookId">
+                <label for="editTitle">Title:</label>
+                <input type="text" id="editTitle" name="editTitle" required><br><br>
+
+                <label for="editAuthor">Author:</label>
+                <input type="text" id="editAuthor" name="editAuthor" required><br><br>
+
+                <label for="editYear">Year:</label>
+                <input type="number" id="editYear" name="editYear" required><br><br>
+
+                <button type="button" onclick="updateBook()">Update Book</button>
+                
+                <button type="button" onclick="closeEditForm()">Cancel</button>
+            </form>
+        </div>
+
+        <script>
+            function addBook() {
+                var title = document.getElementById('title').value;
+                var author = document.getElementById('author').value;
+                var year = document.getElementById('year').value;
+
+                fetch('/books', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ title: title, author: author, year: year })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        window.location.reload();
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            function editBook(bookId) {
+                fetch(`/books/${bookId}`, {
+                    method: 'GET',
+                })
+                    .then(response => response.json())
+                    .then(book => {
+                        document.getElementById('editBookId').value = book.id;
+                        document.getElementById('editTitle').value = book.title;
+                        document.getElementById('editAuthor').value = book.author;
+                        document.getElementById('editYear').value = book.year;
+                    })
+                    .catch(error => console.error('Error:', error));
+
+                document.getElementById('editFormContainer').style.display = 'block';
+            }
+
+            function updateBook() {
+                var bookId = document.getElementById('editBookId').value;
+                var title = document.getElementById('editTitle').value;
+                var author = document.getElementById('editAuthor').value;
+                var year = document.getElementById('editYear').value;
+
+                fetch(`/books/${bookId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ title: title, author: author, year: year })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        window.location.reload();
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            function closeEditForm() {
+                document.getElementById('editFormContainer').style.display = 'none';
+            }
+
+            function deleteBook(bookId) {
+                fetch(`/books/${bookId}`, {
+                    method: 'DELETE',
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        window.location.reload();
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask Notification</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    </head>
+
+    <body>
+        <h1>Flask Notifications</h1>
+
+        <div id="notification"></div>
+
+        <script>
+            var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+            socket.on('notification', function(data) {
+                document.getElementById('notification').innerHTML = data.message;
+            });
+        </script>
+    </body>
+</html>

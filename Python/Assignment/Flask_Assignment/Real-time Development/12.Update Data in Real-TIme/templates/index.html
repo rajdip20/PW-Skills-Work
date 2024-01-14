@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Data Update</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    </head>
+
+    <body>
+        <h1>Real-Time Data Update</h1>
+
+        <p id="data">Data: <span id="data-value">0</span></p>
+
+        <script>
+            var socket = io.connect('http://' + document.domain + ':' + location.port + '/test');
+
+            socket.on('update', function (msg) {
+                document.getElementById('data-value').innerText = msg.data;
+            });
+        </script>
+    </body>
+</html>
