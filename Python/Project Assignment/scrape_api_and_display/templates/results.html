@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>API Information</title>
+
+        <style>
+            li strong {
+                font-weight: bold;
+            }
+
+            li strong::before {
+                content: "\00a0\00a0";
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            li:last-child {
+                margin-bottom: 0;
+            }
+        </style>
+    </head>
+
+    <body style="text-align: center; font-size: 18px;">
+        <h1>API Information - showing {{ data.entries_count }} out of {{ data.count }}</h1>
+
+        <ul style="list-style-type: decimal;">
+            {% for api_info in data.entries %}
+                <li
+                    style="border: 5px; border-color: #ccc; text-align: left; border-radius: 10px; border-style: solid; margin-bottom: 10px; padding: 10px;">
+                    <strong>API:</strong> {{ api_info.API }}<br>
+                    <strong>Description:</strong> {{ api_info.Description }}<br>
+                    <strong>Auth:</strong> {{ api_info.Auth }}<br>
+                    <strong>HTTPS:</strong> {{ api_info.HTTPS }}<br>
+                    <strong>CORS:</strong> {{ api_info.Cors }}<br>
+                    <strong>Link:</strong> <a href="{{ api_info.Link }}" style="color: blue;">{{ api_info.Link }}</a><br>
+                    <strong>Category:</strong> {{ api_info.Category }}<br>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </body>
+
+</html>
