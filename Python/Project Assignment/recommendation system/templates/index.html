@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Movie Recommendation System</title>
+
+        <style>
+            body {
+                text-align: center;
+                padding: 20px;
+            }
+
+            form {
+                margin-top: 80px;
+            }
+
+            label {
+                font-weight: bold;
+                font-size: x-large;
+                color: rgb(43, 5, 235);
+            }
+
+            select {
+                padding: 8px;
+                margin: 5px;
+                border: 1px solid #95a1c3;
+                border-width: 3px;
+                border-radius: 10px;
+                width: 250px;
+                font-size: 20px;
+            }
+
+            input[type="number"] {
+                padding: 8px;
+                margin: 5px;
+                border: 1px solid #95a1c3;
+                border-width: 3px;
+                border-radius: 10px;
+                width: 250px;
+                font-size: 20px;
+            }
+
+            input[type="submit"] {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #007bff;
+                color: #fff;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Welcome to the Movie Recommendation System</h1>
+        <h3>We pick top movies for you</h3>
+
+        <form action="/recommend" method="post">
+            <label for="category">Pick your preferred movie Genre:</label>
+            <br>
+            
+            <select name="genre" id="genre" required>
+                <option value="28:Action">Action</option>
+                <option value="12:Adventure">Adventure</option>
+                <option value="16:Animation">Animation</option>
+                <option value="35:Comedy">Comedy</option>
+                <option value="80:Crime">Crime</option>
+                <option value="99:Documentary">Documentary</option>
+                <option value="18:Drama">Drama</option>
+                <option value="10751:Family">Family</option>
+                <option value="14:Fantasy">Fantasy</option>
+                <option value="36:History">History</option>
+                <option value="27:Horror">Horror</option>
+                <option value="10402:Music">Music</option>
+                <option value="9648:Mystery">Mystery</option>
+                <option value="10749:Romance">Romance</option>
+                <option value="878:Science Fiction">Science Fiction</option>
+                <option value="10770:TV Movie">TV Movie</option>
+                <option value="53:Thriller">Thriller</option>
+                <option value="10752:War">War</option>
+                <option value="37:Western">Western</option>
+            </select>
+            <br><br>
+            
+            <label for="count">How many recommendation you want?</label><br>
+            <input type="number" id="number" name="number" min="10" max="50" placeholder="Enter Movie Count" required>
+            <br><br>
+            
+            <input type="submit" value="Get Results">
+        </form>
+    </body>
+</html>
